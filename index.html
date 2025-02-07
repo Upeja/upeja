@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanka Dairies</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+   
+    
+    <style>
+        header {
+    background: transparent !important; /* Removes the black background */
+    z-index: 1000;
+}
+header i {
+    color: white !important; /* Makes icons white */
+}
+header span {
+    color: white !important; /* Makes the text white */
+}
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+        .navbar {
+            background-color: #ffffff !important;
+        }
+        .navbar .navbar-brand {
+            margin-bottom: 10px; /* Adds space between the logo and the navbar links */
+        }
+
+        .about-us {
+            background-color: #e9f5e9;
+            padding: 20px 0;
+        }
+        .about-us h2 {
+            color: #28a745;
+        }
+        .about-us h3 {
+            color: #ffc107;
+        }
+        
+        .banner-section {
+            position: relative;
+            color: white;
+            text-align: center;
+            width: 50%;
+            min-height: 300px; /* Ensures equal height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .banner-left {
+            background: url('Images/iso.jpg') center/cover;
+            border: 30px;
+            border-color: white;
+        }
+        .banner-right {
+            background: url('Images/cowszero.JPG') center/cover;
+        }
+        .banner-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    width: 10px; /* Adjust this value to make the gap bigger or smaller */
+    background: white; /* Divider color (change if needed) */}
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.6);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .overlay button {
+            margin-top: auto; /* Ensures button stays at the bottom */
+        }
+        .stats {
+            text-align: center;
+            padding: 40px 0;
+        }
+        .news-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+        }
+        .news-item {
+            background: white;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .news-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .footer {
+            background-color: black;
+            color: #666;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer-nav a {
+            color: #666;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        .footer-nav a.active,
+        .footer-nav a:hover {
+            color: #a6ff00; /* Highlighted Green */
+        }
+        .copyright {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header class="p-3 position-absolute w-100">
+        <div class="container d-flex justify-content-end align-items-center">
+            <button class="btn btn-warning me-2">News Center</button>
+            <button class="btn btn-warning me-4">Investor Relations</button>
+            <span class="text-white">Follow us:</span>
+            <i class="bi bi-facebook fs-4 me-2"></i>
+            <i class="bi bi-youtube fs-4"></i>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <img src="Images/cows.png" alt="Cows in a field">
+        <div class="hero-text">
+            <h1>DRINK MILK FOR A HEALTHY LIFE</h1>
+            <p>Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.</p>
+        </div>
+    </section>
+    
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+        <div class="container flex-column text-center">
+            <!-- Logo Container -->
+            <a class="navbar-brand" href="#">
+                <img src="Images/logo.png" alt="Logo" height="50">
+            </a>
+            
+            <!-- Navbar Links -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Brands</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Subsidiaries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Innovation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="about-us text-center">
+        <div class="container">
+            <div class="row align-items-center mt-4">
+                <!-- Image on the left (first column) -->
+                <div class="col-md-6">
+                    <img src="Images/family.png" class="img-fluid" alt="Happy Family">
+                </div>
+                <!-- Text on the right (second column) -->
+                <div class="col-md-6 text-md-start">
+                    <h2>ABOUT LANKA DAIRIES LTD</h2>
+                    <h3>LOREM IPSUM HAS BEEN THE INDUSTRY'S STANDARD</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text since the 1500s.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="our-products text-center py-5">
+        <div class="container">
+            <h2 class="mb-4">OUR PRODUCTS</h2>
+            <p class="mb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            
+            <div class="row row-cols-1 row-cols-md-5 g-4">
+                <!-- Product 1 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="Images/freshmilk.png" class="card-img-top" alt="Fresh Milk">
+                        <div class="card-body">
+                            <h5 class="card-title">Fresh Milk</h5>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <button class="btn btn-warning read-more">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="Images/flavoured.png" class="card-img-top" alt="Flavored Milk">
+                        <div class="card-body">
+                            <h5 class="card-title">Flavored Milk</h5>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <button class="btn btn-primary read-more">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="Images/cheese.png" class="card-img-top" alt="Cheese & Butter">
+                        <div class="card-body">
+                            <h5 class="card-title">Cheese & Butter</h5>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <button class="btn btn-success read-more">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="Images/yoghurt.png" class="card-img-top" alt="Yoghurt">
+                        <div class="card-body">
+                            <h5 class="card-title">Yoghurt</h5>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <button class="btn btn-info read-more">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="Images/myjuicee.png" class="card-img-top" alt="Juices">
+                        <div class="card-body">
+                            <h5 class="card-title">Juices</h5>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <button class="btn btn-dark read-more">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-brands text-center py-5 bg-light">
+        <div class="container">
+            <h2 class="mb-4">OUR BRANDS</h2>
+            <p class="mb-5">Daily products have never been considered healthier than present. Our brands have been specially produced with the utmost care and testing to give your body the nutrition it needs.</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-3">
+                    <img src="Images/ambewela.png" alt="Ambewela" class="img-fluid">
+                </div>
+                <div class="col-md-3">
+                    <img src="Images/myjuiceelogo.png" alt="My Juicee" class="img-fluid">
+                </div>
+                <div class="col-md-3">
+                    <img src="Images/daily.png" alt="Daily" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 banner-section banner-left">
+                    <div class="overlay">
+                        <h2>ISO 22000</h2>
+                        <p>Certified Company</p>
+                        <p>The goal of a sustainable future remains at the top of our KPIs.</p>
+                        <button class="btn btn-primary">Read More</button>
+                    </div>
+                </div>
+                <div class="col-md-6 banner-section banner-right">
+                    <div class="overlay">
+                        <h2>STRIVE FOR <span class="fw-bold">ZERO</span></h2>
+                        <p>Environmental impact in our operations</p>
+                        <button class="btn btn-success">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Stats Section -->
+    <div class="container text-center mt-5">
+        <div class="row">
+            <div class="col-md-3">
+                <i class="fas fa-award fa-3x"></i>
+                <h3 class="text-warning">50</h3>
+                <p>Certified Standards</p>
+            </div>
+            <div class="col-md-3">
+                <i class="fas fa-industry fa-3x"></i>
+                <h3 class="text-warning">7.6BN+</h3>
+                <p>Production Scale</p>
+            </div>
+            <div class="col-md-3">
+                <i class="fas fa-users fa-3x"></i>
+                <h3 class="text-warning">1000+</h3>
+                <p>Happy Employees</p>
+            </div>
+            <div class="col-md-3">
+                <i class="fa-solid fa-cow fa-3x"></i>
+                <h3 class="text-warning">15.3+</h3>
+                <p>Milk Production</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- News and Events -->
+    <div class="container news-section mt-5">
+        <h2 class="text-center mb-4">News and Events</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="Images/ambewelafarms.png" alt="News Image" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6">
+                <div class="news-item">
+                    <h5 class="mt-6">March 26, 2024</h5>
+                    <p><strong>Lorem Ipsum is simply dummy text</strong></p>
+                    <p>Lorem Ipsum is simply dummy text of the printing industry...</p>
+                </div>
+                <div class="news-item">
+                    <h5 class="mt-6">March 27, 2024</h5>
+                    <p><strong>New Dairy Products Launch</strong></p>
+                    <p>We are introducing a new range of organic dairy products...</p>
+                </div>
+                <div class="news-item">
+                    <h5 class="mt-6">April 2, 2024</h5>
+                    <p><strong>Health & Nutrition Conference</strong></p>
+                    <p>Join us for a seminar on the importance of dairy nutrition...</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer-nav">
+                <a href="#" class="active">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Products</a>
+                <a href="#">Brands</a>
+                <a href="#">Subsidiaries</a>
+                <a href="#">Innovation</a>
+                <a href="#">News Center</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Contact Us</a>
+            </nav>
+            <p class="copyright">© 2025 LANKA DAIRIES. ALL RIGHTS RESERVED</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.read-more').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('More details about ' + this.previousElementSibling.previousElementSibling.innerText);
+            });
+        });
+        $(document).ready(function(){
+            $(".footer-nav a").click(function(){
+                $(".footer-nav a").removeClass("active");
+                $(this).addClass("active");
+            });
+        });
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</body>
+</html>
