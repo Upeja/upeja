@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #edfadc;
+        }
+        .top-bar {
+            background-color: #2f8f2f;
+            padding: 5px 0;
+            text-align: right;
+            font-size: 14px;
+        }
+        .top-bar a {
+            color:white;
+            margin-right: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        .navbar {
+            background-color: #2f8f2f;
+        }
+        .navbar a {
+            color: white;
+            font-weight: bold;
+        }
+        .hero {
+            position: relative;
+        }
+
+        .hero img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+        .hero-text h1{
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .product-item {
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+        .product-item:hover {
+            transform: scale(1.1);
+        }
+        .btn-sm {
+            margin-top: 5px;
+            margin-bottom: 50px;
+        }
+        #productDisplay {
+            border: 2px solid #28a745;
+            text-align: center;
+        }
+        
+
+        .footer {
+            padding-top: 50px; /* Adjust as needed */
+            background-color: black;
+            color: #666;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-nav a {
+            color: #666;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .footer-nav a.active,
+        .footer-nav a:hover {
+            color: #a6ff00;
+            /* Highlighted Green */
+        }
+
+        .copyright {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+</style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <a href="#">News Center</a>
+            <a href="#">Investor Relations</a>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="Images/logo.png" alt="Logo" height="50"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="abthistory.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutfocus.html">Innovation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutlmf.html">Careers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="subsidaries.html">Subsidiaries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section text-center">
+        <img src="Images/cows.png" alt="Cows in a field">
+        <div class="hero-text">
+            <h1>Premium Product Line to perfection</h1>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <!-- Top Section: Display Selected Product -->
+        <div id="productDisplay" class="p-4 bg-white shadow rounded text-center">
+            <img id="productImage" src="Images/cheese.png" class="img-fluid mx-auto d-block" style="width: 400px;" alt="Product">
+            <h3 class="text-success mt-3">Ambewela Cheese</h3>
+            <p id="productDescription">Cheeses are produced both at the New Zealand farm in Pattipola and Ambewela Products Pvt Ltd in Ambewela. We use milk sourced only from Ambewela in the process to ensure the highest quality standards thus delivering on the brand promise to the consumers. The modern state-of-the-art factory has the capability of producing cheese on a mass scale using mechanized processors. However, the types of cheeses produced are in a more European palate as APPL caters to the hospitality sector rather than the domestic market. APPL produces the following varieties of cheese. The flavor, texture, weight, size, and quality can be managed better in this form of mechanized production process.</p>
+        </div>
+        
+        <!-- Bottom Section: Product Selection -->
+        <h4 class="text-center mt-5">Other Products</h4>
+        <div class="d-flex justify-content-center mt-3">
+            <div class="product-item text-center mx-2">
+                <img src="Images/cheese.png" class="img-fluid" style="max-width: 200px;" alt="Product 1">
+                <p>Ambewela Cheese</p>
+                <button class="btn btn-success btn-sm" onclick="changeProduct('Images/cheese.png', 'Ambewela Cheese', 'Cheeses are produced both at the New Zealand farm in Pattipola and Ambewela Products Pvt Ltd in Ambewela. We use milk sourced only from Ambewela in the process to ensure the highest quality standards thus delivering on the brand promise to the consumers.The modern state of the art factory has the capability of producing cheese in mass scale using mechanized processors. However, the types of cheeses produced in a more European pallet as APPL caters to the hospitality sector than the domestic market. APPL produces the following varieties of cheese. The flavor, texture, weight, size and quality can be managed better in this form of mechanized production process.')">Read More</button>
+            </div>
+            <div class="product-item text-center mx-2">
+                <img src="Images/flavoured.png" class="img-fluid" style="max-width: 200px;" alt="Product 2">
+                <p>Flavored Milk</p>
+                <button class="btn btn-success btn-sm" onclick="changeProduct('Images/flavoured.png', 'Flavored Milk', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.')">Read More</button>
+            </div>
+            <div class="product-item text-center mx-2">
+                <img src="Images/yoghurt.png" class="img-fluid" style="max-width: 200px;" alt="Product 3">
+                <p>Yoghurt</p>
+                <button class="btn btn-success btn-sm" onclick="changeProduct('Images/yoghurt.png', 'Yoghurt', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.')">Read More</button>
+            </div>
+            <div class="product-item text-center mx-2">
+                <img src="Images/cheese.png" class="img-fluid" style="max-width: 200px;" alt="Product 1">
+                <p>Ambewela Cheese</p>
+                <button class="btn btn-success btn-sm" onclick="changeProduct('Images/cheese.png', 'Ambewela Cheese', 'Cheeses are produced both at the New Zealand farm in Pattipola and Ambewela Products Pvt Ltd in Ambewela. We use milk sourced only from Ambewela in the process to ensure the highest quality standards thus delivering on the brand promise to the consumers.The modern state of the art factory has the capability of producing cheese in mass scale using mechanized processors. However, the types of cheeses produced in a more European pallet as APPL caters to the hospitality sector than the domestic market. APPL produces the following varieties of cheese. The flavor, texture, weight, size and quality can be managed better in this form of mechanized production process.')">Read More</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        function changeProduct(image, title, description) {
+            document.getElementById('productImage').src = image;
+            document.getElementById('productDisplay').querySelector('h3').textContent = title;
+            document.getElementById('productDescription').textContent = description;
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="abthistory.html">About Us</a>
+                <a href="product.html" class="active">Products</a>
+                <a href="aboutfocus.html">Innovation</a>
+                <a href="aboutlmf.html">Careers</a>
+                <a href="subsidaries.html">Subsidiaries</a>
+                <a href="#">News Center</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Contact Us</a>
+            </nav>
+            <p class="copyright">© 2025 LANKA DAIRIES. ALL RIGHTS RESERVED</p>
+        </div>
+    </footer>
+<script>
+    $(document).ready(function () {
+        $(".footer-nav a").click(function () {
+            $(".footer-nav a").removeClass("active");
+            $(this).addClass("active");
+        });
+    });
+</script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

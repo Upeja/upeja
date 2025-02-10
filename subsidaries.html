@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subsidiaries Section</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #edfadc;
+        }
+        .top-bar {
+            background-color: #2f8f2f;
+            padding: 5px 0;
+            text-align: right;
+            font-size: 14px;
+        }
+        .top-bar a {
+            color:white;
+            margin-right: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        .navbar {
+            background-color: #2f8f2f;
+        }
+        .navbar a {
+            color: white;
+            font-weight: bold;
+        }
+        .hero {
+            position: relative;
+        }
+
+        .hero img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+        .hero-text h1{
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .subsidiaries-section {
+      padding: 50px 0;
+      text-align: center;
+    }
+    .subsidiaries-section h2 {
+      color: #557c35;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+    .subsidiary {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 0px;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .subsidiary img {
+      width: 100%;
+      height: auto;
+    }
+    .subsidiary-content {
+      padding: 20px;
+      flex: 1;
+    }
+    .subsidiary-title {
+      color: #5b7634;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .subsidiary-description {
+      font-size: 14px;
+      color: #555;
+    }
+    .footer {
+            background-color: black;
+            color: #666;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-nav a {
+            color: #666;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .footer-nav a.active,
+        .footer-nav a:hover {
+            color: #a6ff00;
+            /* Highlighted Green */
+        }
+
+        .copyright {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+</style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <a href="#">News Center</a>
+            <a href="#">Investor Relations</a>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="Images/logo.png" alt="Logo" height="50"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="abthistory.html">About Us</a></li>
+                  <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
+                  <li class="nav-item"><a class="nav-link" href="aboutfocus.html">Innovation</a></li>
+                  <li class="nav-item"><a class="nav-link" href="aboutlmf.html">Careers</a></li>
+                  <li class="nav-item"><a class="nav-link" href="subsidaries.html">Subsidiaries</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section text-center">
+        <img src="Images/cows.png" alt="Cows in a field">
+        <div class="hero-text">
+            <h1>Premium Product Line to perfection</h1>
+        </div>
+    </div>
+
+    <div class="container subsidiaries-section">
+        <h2>OUR SUBSIDIARIES</h2>
+      
+        <div class="subsidiary row">
+          <div class="col-md-6">
+            <img src="Images/ambewelafarms.png" alt="Ambewela Farm">
+          </div>
+          <div class="col-md-6 subsidiary-content">
+            <div class="subsidiary-title">AMBEWELA LIVESTOCK (PVT) LTD</div>
+            <p class="subsidiary-description">
+              The Ambewela farm situated in the district of Nuwara Eliya is the core establishment under this company. It is solely responsible for supplying cow's milk exclusively to the group companies. The farm is maintained according to the highest quality standards with regards imported from New Zealand that provides superior feed to the two most productive dairy cow species in the world: Ayrshire and Friesian.
+            </p>
+          </div>
+        </div>
+      
+        <div class="subsidiary row">
+          <div class="col-md-6 order-md-2">
+            <img src="Images/ambewelafarms.png" alt="Pattipola Farm">
+          </div>
+          <div class="col-md-6 order-md-1 subsidiary-content">
+            <div class="subsidiary-title">PATTIPOLA LIVESTOCK (PVT) LTD</div>
+            <p class="subsidiary-description">
+              Pattipola Livestock Private Limited operates the Pattipola Farm, more famously known as the New Zealand Farm. This farm that is also situated in Nuwara Eliya provides high quality cow milk to the group companies. Additionally, the farm attract local and foreign visitors and provides them the opportunity to experience the processes of a dairy farm through its daily excursion program. Over the years, the Pattipola Farm has become one of the key tourist attractions in the area. New Zealand Farm is open for visitors from 8 a.m. to 6 p.m. on all 365 days of the year.
+            </p>
+          </div>
+        </div>
+      
+        <div class="subsidiary row">
+          <div class="col-md-6">
+            <img src="Images/ambewelafarms.png" alt="Ambewela Products">
+          </div>
+          <div class="col-md-6 subsidiary-content">
+            <div class="subsidiary-title">AMBEWELA PRODUCTS (PVT) LTD</div>
+            <p class="subsidiary-description">
+              The company is responsible for the manufacturing and distribution of top household dairy products in Sri Lanka. Its product portfolio includes well-established flavored milk (chocolate and vanilla), yogurt as well as cream, gouda, and parmesan cheese flavor range and cheese spread. The company also experienced a massive expansion program that has further amplified its capacity and strengthened its distribution chain to become more accessible to its markets.
+            </p>
+          </div>
+        </div>
+      
+      </div>
+
+      <footer class="footer">
+        <div class="container">
+            <nav class="footer-nav">
+              <a href="index.html">Home</a>
+              <a href="abthistory.html">About Us</a>
+              <a href="product.html" >Products</a>
+              <a href="aboutfocus.html">Innovation</a>
+              <a href="aboutlmf.html">Careers</a>
+              <a href="subsidaries.html" class="active">Subsidiaries</a>
+              <a href="#">News Center</a>
+              <a href="#">Investor Relations</a>
+              <a href="#">Contact Us</a>
+            </nav>
+            <p class="copyright">© 2025 LANKA DAIRIES. ALL RIGHTS RESERVED</p>
+        </div>
+    </footer>
+<script>
+    $(document).ready(function () {
+      $(".footer-nav a").click(function () {
+          $(".footer-nav a").removeClass("active");
+          $(this).addClass("active");
+      });
+  });
+</script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

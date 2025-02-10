@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About LMF</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #edfadc;
+        }
+        .top-bar {
+            background-color: #2f8f2f;
+            padding: 5px 0;
+            text-align: right;
+            font-size: 14px;
+        }
+        .top-bar a {
+            color:white;
+            margin-right: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        .navbar {
+            background-color: #2f8f2f;
+        }
+        .navbar a {
+            color: white;
+            font-weight: bold;
+        }
+        .hero {
+            position: relative;
+        }
+
+        .hero img {
+            max-width: 1140px;
+            height: auto;
+            object-fit: cover;
+        }
+        
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+        .hero-text h1{
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+    .full-width-info-section {
+        padding: 50px 0;
+        background: url('Images/iso.jpg') center/cover no-repeat;
+        background-size: cover;
+        width: 100vw;
+        color: white; /* Ensures text is readable on the background */
+    }
+    .info-section .content {
+    max-width: 1140px;
+    margin: 0 auto;
+    text-align: center;
+    }
+
+    .info-section h2 {
+        font-weight: bold;
+    }
+    .info-section p {
+        font-size: 1.1rem;
+    }
+    .card-container {
+      display: flex;
+      justify-content: space-between;
+      padding: 200px;
+      background-color: #edfadc;
+      height: 510px;
+    }
+    .card-column {
+      position: relative;
+      width: 48%;
+    }
+    .custom-card {
+      background: #f4f4e8;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      height: 300px;
+      margin-bottom: 0px;
+      position: absolute;
+      width: 100%;
+    }
+    .custom-card h5 {
+      font-weight: bold;
+      color: #4b8b3b;
+      margin-bottom: 10px;
+    }
+    .custom-card p {
+      color: #555;
+      font-size: 14px;
+    }
+    .custom-card img {
+            width: 150px; /* Adjust width as needed */
+            height: auto;
+            display: block;
+            margin: 10px auto; /* Centers the image */
+        }
+    /* Left column cards positioning (upside-down staircase effect) */
+    .left .card1 { bottom: -10px; left: -140px;; z-index: 1; }
+    .left .card2 { bottom: -90px; left:-80px; z-index: 2; }
+    .left .card3 { bottom: -170px; left:-20px; z-index: 3; }
+    /* Right column cards positioning (upside-down staircase effect) */
+    .right .card4 { bottom: -10px; right:-140px; z-index: 1; }
+    .right .card5 { bottom: -90px; right:-80px; z-index: 2; }
+    .right .card6 { bottom: -170px; right:-20px; z-index: 3; }
+    
+    .footer {
+            background-color: black;
+            color: #666;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-nav a {
+            color: #666;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .footer-nav a.active,
+        .footer-nav a:hover {
+            color: #a6ff00;
+            /* Highlighted Green */
+        }
+
+        .copyright {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+</style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <a href="#">News Center</a>
+            <a href="#">Investor Relations</a>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="Images/logo.png" alt="Logo" height="50"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="abthistory.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutfocus.html">Innovation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutlmf.html">Careers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="subsidaries.html">Subsidiaries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section text-center">
+        <img src="Images/cows.png" alt="Cows in a field">
+        <div class="hero-text">
+            <h1>LIFE AT LMF</h1>
+        </div>
+    </div>
+
+    <!-- Science and Innovation Section -->
+    <div class="full-width-info-section">
+        <div class="container text-center">
+            <h2 class="mb-5"> Employees are the driving force at LMF</h2>
+            <p> Employees are the driving force at LMF. The company encourages diversity among its employees to create a dynamic team that thrives in any given 
+                situation.  Currently the LMF team consists of over 700 of individuals from different walks of life with unique skill sets.  The contribution by each employee 
+                is highly valued and their inputs are appreciated in the process of setting goals and objectives. This inclusive culture ensures that the entire team is driven 
+                towards a single mission envisioned by the brand.</p>
+        </div>
+    </div>
+    <div class="container card-container">
+        <div class="card-column left">
+          <div class="custom-card card1">
+            <h5>COMPETITIVE REMUNERATION</h5>
+          </div>
+          <div class="custom-card card2">
+            <h5>CAREER GROWTH OPPORTUNITIES</h5>
+          </div>
+          <div class="custom-card card3 text-center p-3 border rounded shadow">
+            
+            <h5>WELFARE MEASURES</h5>
+            <img src="Images/welfare.png" alt="Welfare Measures">
+            <p>The well-being of employees is considered of utmost importance at LMF.</p>
+          </div>
+        </div>
+        <div class="card-column right">
+          <div class="custom-card card4">
+            <h5>WORK-LIFE BALANCE</h5>
+          </div>
+          <div class="custom-card card5">
+            <h5>HEALTH AND SAFETY MEASURES</h5>
+            
+          </div>
+          <div class="custom-card card6 text-center p-3 border rounded shadow">
+            <h5>OPEN DOOR POLICY</h5>
+            <img src="Images/openhand.png" alt="Open Door Icon">
+            <p>Communication is made easy and transparent within the company.</p>
+        </div>
+        </div>
+      </div>
+      
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="abthistory.html">About Us</a>
+                <a href="product.html" >Products</a>
+                <a href="aboutfocus.html">Innovation</a>
+                <a href="aboutlmf.html" class="active">Careers</a>
+                <a href="subsidaries.html">Subsidiaries</a>
+                <a href="#">News Center</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Contact Us</a>
+            </nav>
+            <p class="copyright">© 2025 LANKA DAIRIES. ALL RIGHTS RESERVED</p>
+        </div>
+    </footer>
+<script>
+    $(document).ready(function () {
+        $(".footer-nav a").click(function () {
+            $(".footer-nav a").removeClass("active");
+            $(this).addClass("active");
+        });
+    });
+</script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
