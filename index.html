@@ -12,6 +12,43 @@
 
 
     <style>
+        
+        .top-right-buttons {
+            position: absolute;
+            top: -8px;
+            right: 200px;
+            display: flex;
+            align-items: center;
+            background-color: #f18700;
+            border-radius: 15px;
+            padding: 5px 15px;
+        }
+        .top-right-icons{
+            position: absolute;
+            top: -8px;
+            right: 30px;
+            display: flex;
+            align-items: center;
+            
+            border-radius: 15px;
+            padding: 5px 15px;
+        }
+        .custom-btn {
+            color: white;
+            font-weight: bold;
+            background: none;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .custom-btn:hover {
+            text-decoration: underline;
+        }
+        .separator {
+            color: white;
+            margin: 0 10px;
+            font-weight: bold;
+        }
         header {
             background: transparent !important;
             /* Removes the black background */
@@ -34,30 +71,32 @@
 
         .hero img {
             width: 100%;
-            height: 400px;
+            height: 550px;
             object-fit: cover;
         }
 
         .hero-text {
             position: absolute;
-            top: 50%;
-            left: 50%;
+            top: 300px;
+            left: 700px;
             transform: translate(-50%, -50%);
-            text-align: center;
+            text-align: justify;
             color: white;
+            font-weight:700;
+            font-size: large;
         }
 
         .navbar {
-            background-color: #ffffff !important;
+            background-color: white !important;
         }
 
         .navbar .navbar-brand {
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             /* Adds space between the logo and the navbar links */
         }
 
         .about-us {
-            background-color: #e9f5e9;
+            background-color: white;
             padding: 20px 0;
         }
 
@@ -100,7 +139,7 @@ padding-right: 0px;
             bottom: 0;
             left: 100%;
 
-            background: white;
+            background: white(255, 255, 255);
             /* Divider color (change if needed) */
         }
 
@@ -120,6 +159,87 @@ padding-right: 0px;
             margin-top: auto;
             /* Ensures button stays at the bottom */
         }
+        .our-products {
+            background: linear-gradient(to bottom, #084444 50%, white 50%);
+            padding: 50px 0;
+            text-align: center;
+        }
+        .our-products h2,
+        .our-products h4 {
+            color: white;
+        }
+        .our-products h5,
+        .our-products p {
+            color: black;
+        }
+
+        /* Card styles */
+        .card {
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+            background-color: white;
+            border: none;
+            padding-bottom: 20px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Read More Button Styles */
+        .read-more {
+            border-radius: 30px;
+            font-weight: bold;
+            width: 130px;
+            padding: 10px;
+            display: block;
+            margin: 20px auto 0;
+        }
+
+        /* Custom button colors */
+        .btn-warning {
+            background-color: #e79e1b;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+            border: none;
+        }
+
+        .btn-info {
+            background-color: #17a2b8;
+            border: none;
+        }
+
+        .btn-dark {
+            background-color: #343a40;
+            border: none;
+        }
+        .container h6{
+            font-size: 60px;
+        }
+        .container p{
+            font-size: 20px;
+        }
+
+        .card-img-top {
+            height: 150px;
+            object-fit: contain;
+            padding: 10px;
+        }
 
         .stats {
             text-align: center;
@@ -127,14 +247,14 @@ padding-right: 0px;
         }
 
         .news-section {
-            background-color: #f8f9fa;
+            background-color: white;
             padding: 50px 0;
         }
 
         .news-item {
             background: white;
             padding: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
             border-radius: 10px;
             margin-bottom: 15px;
         }
@@ -174,9 +294,11 @@ padding-right: 0px;
 
 <body>
     <header class="p-3 position-absolute w-100">
-        <div class="container d-flex justify-content-end align-items-center">
-            <button class="btn btn-warning me-2">News Center</button>
-            <button class="btn btn-warning me-4">Investor Relations</button>
+        <div class="top-right-buttons">
+            <button class="custom-btn">News Center</button>
+            <span class="separator">|</span>
+            <button class="custom-btn">Investor Relations</button></div>
+            <div class="top-right-icons">
             <span class="text-white">Follow us:</span>
             <i class="bi bi-facebook fs-4 me-2"></i>
             <i class="bi bi-youtube fs-4"></i>
@@ -184,7 +306,7 @@ padding-right: 0px;
     </header>
 
     <section class="hero">
-        <img src="Images/cows.png" alt="Cows in a field">
+        <img src="Images/Artboard3.png" alt="Cows in a field">
         <div class="hero-text">
             <h1>Bringing You the Best in Dairy Excellence</h1>
             <p>At Lanka Dairies Limited (LDL), we are committed to delivering premium dairy products that embody freshness, quality, and innovation. 
@@ -196,9 +318,7 @@ padding-right: 0px;
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
         <div class="container flex-column text-center">
             <!-- Logo Container -->
-            <a class="navbar-brand" href="index.html">
-                <img src="Images/logo.png" alt="Logo" height="50">
-            </a>
+            
 
             <!-- Navbar Links -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -219,6 +339,7 @@ padding-right: 0px;
     </nav>
 
     <section class="about-us text-center">
+        
         <div class="container">
             <div class="row align-items-center mt-4">
                 <!-- Image on the left (first column) -->
@@ -237,11 +358,11 @@ padding-right: 0px;
             </div>
         </div>
     </section>
-    <section class="our-products text-center py-5">
+    <section class="our-products text-center">
         <div class="container">
             <h2 class="mb-4">OUR PRODUCTS</h2>
-            <p class="mb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                been the industry's standard dummy text ever since the 1500s.</p>
+            <h4 class="mb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                been the industry's standard dummy text ever since the 1500s.</h4>
 
             <div class="row row-cols-1 row-cols-md-5 g-4">
                 <!-- Product 1 -->
@@ -250,8 +371,7 @@ padding-right: 0px;
                         <img src="Images/freshmilk.png" class="card-img-top" alt="Fresh Milk">
                         <div class="card-body">
                             <h5 class="card-title">Fresh Milk</h5>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry.</p>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             <button class="btn btn-warning read-more">Read More</button>
                         </div>
                     </div>
@@ -263,8 +383,7 @@ padding-right: 0px;
                         <img src="Images/flavoured.png" class="card-img-top" alt="Flavored Milk">
                         <div class="card-body">
                             <h5 class="card-title">Flavored Milk</h5>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry.</p>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             <button class="btn btn-primary read-more">Read More</button>
                         </div>
                     </div>
@@ -276,8 +395,7 @@ padding-right: 0px;
                         <img src="Images/cheese.png" class="card-img-top" alt="Cheese & Butter">
                         <div class="card-body">
                             <h5 class="card-title">Cheese & Butter</h5>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry.</p>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             <button class="btn btn-success read-more">Read More</button>
                         </div>
                     </div>
@@ -289,8 +407,7 @@ padding-right: 0px;
                         <img src="Images/yoghurt.png" class="card-img-top" alt="Yoghurt">
                         <div class="card-body">
                             <h5 class="card-title">Yoghurt</h5>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry.</p>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             <button class="btn btn-info read-more">Read More</button>
                         </div>
                     </div>
@@ -302,8 +419,7 @@ padding-right: 0px;
                         <img src="Images/myjuicee.png" class="card-img-top" alt="Juices">
                         <div class="card-body">
                             <h5 class="card-title">Juices</h5>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry.</p>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             <button class="btn btn-dark read-more">Read More</button>
                         </div>
                     </div>
@@ -356,22 +472,22 @@ padding-right: 0px;
         <div class="row">
             <div class="col-md-3">
                 <i class="fas fa-award fa-3x"></i>
-                <h3 class="text-warning">50</h3>
+                <h6 class="text-warning">50</h6>
                 <p>Certified Standards</p>
             </div>
             <div class="col-md-3">
                 <i class="fas fa-industry fa-3x"></i>
-                <h3 class="text-warning">7.6BN+</h3>
+                <h6 class="text-warning">7.6BN+</h6>
                 <p>Production Scale</p>
             </div>
             <div class="col-md-3">
                 <i class="fas fa-users fa-3x"></i>
-                <h3 class="text-warning">1000+</h3>
+                <h6 class="text-warning">1000+</h6>
                 <p>Happy Employees</p>
             </div>
             <div class="col-md-3">
                 <i class="fa-solid fa-cow fa-3x"></i>
-                <h3 class="text-warning">15.3+</h3>
+                <h6 class="text-warning">15.3+</h6>
                 <p>Milk Production</p>
             </div>
         </div>
@@ -425,6 +541,11 @@ padding-right: 0px;
         document.querySelectorAll('.read-more').forEach(button => {
             button.addEventListener('click', function () {
                 alert('More details about ' + this.previousElementSibling.previousElementSibling.innerText);
+            });
+        });
+        document.querySelectorAll(".read-more").forEach(button => {
+            button.addEventListener("click", () => {
+                alert("More details coming soon!");
             });
         });
         $(document).ready(function () {
